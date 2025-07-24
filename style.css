@@ -3,15 +3,17 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #fafafa;
   color: #333;
 }
 
+/* Header amélioré */
 header {
   background-color: #111;
   color: #fff;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 nav a {
@@ -24,6 +26,21 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Bannière d’accueil */
+.banniere {
+  background: url('https://images.unsplash.com/photo-1519744792095-2f2205e87b6f') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 4px solid #25d366;
+}
+
+.banniere h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* Contenu */
 main {
   padding: 20px;
   background-color: #fff;
@@ -33,14 +50,16 @@ section {
   margin-bottom: 30px;
 }
 
+/* Bloc produit */
 .produit {
   background-color: #fff;
   padding: 15px;
   margin: 10px 0;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Bouton panier */
 .btn-panier {
   background-color: #222;
   color: #fff;
@@ -50,12 +69,14 @@ section {
   margin-top: 10px;
   text-decoration: none;
   display: inline-block;
+  border-radius: 5px;
 }
 
 .btn-panier:hover {
   background-color: #555;
 }
 
+/* Bouton WhatsApp */
 .btn-contact {
   display: inline-block;
   padding: 10px 15px;
@@ -66,6 +87,7 @@ section {
   margin-top: 15px;
 }
 
+/* Pied de page */
 footer {
   background-color: #111;
   color: #fff;
