@@ -103,5 +103,60 @@ footer {
   margin-bottom: 10px;
   display: block;
 }
+```css
+/* Hero bannière */
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1606813904444-1f13f9193d3e');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.btn-accueil {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.btn-accueil.second {
+  background-color: #333;
+}
+
+.btn-accueil:hover {
+  opacity: 0.9;
+}
+
+/* Features section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.feature {
+  max-width: 250px;
+}
 ```
 
