@@ -51,6 +51,17 @@
   <footer>
     <p>&copy; 2025 Bourgeois Store. Tous droits réservés.</p>
   </footer>
+html
+<script>
+  let compteur = 0;
+
+  document.querySelectorAll(".btn-panier").forEach(btn => {
+    btn.addEventListener("click", () => {
+      compteur++;
+      document.getElementById("compteur-panier").textContent = compteur;
+    });
+  });
+</script>
 </body>
 </html>
 ```
