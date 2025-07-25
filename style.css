@@ -95,4 +95,13 @@ footer {
   padding: 15px;
   margin-top: 30px;
 }
+```css
+.img-produit {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+}
 ```
+
