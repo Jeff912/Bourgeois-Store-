@@ -15,9 +15,9 @@
       <a href="produits.html">Produits</a>
     </nav>
   </header>
-
+  html
   <main>
-    <section>
+    <h2>Votre Panier 🧺</h2>
       <table id="table-panier">
         <thead>
           <tr>
@@ -25,16 +25,16 @@
             <th>Prix</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          <!-- Les produits ajoutés 
+          s'afficheront ici -->
+          </tbody>
       </table>
-      <p id="total"></p>
-      html
-<button id="vider-panier" class="btn-panier" style="background-color: #dc3545; margin-top: 10px;">
-  🗑️ Vider le panier
-</button>
-
-</section>
-  </main>
+    
+      <button onclick="viderPanier()" class="btn-vider">
+    🗑️ Vider le panier
+  </button>
+</main>
 
   <footer>
     <p>&copy; 2025 Bourgeois Store. Tous droits réservés.</p>
