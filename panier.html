@@ -45,6 +45,11 @@
     const tbody = document.querySelector('#table-panier tbody');
     const totalElement = document.getElementById('total');
     let total = 0;
+    html
+document.getElementById('vider-panier').addEventListener('click', () => {
+  localStorage.removeItem('panier');
+  location.reload();
+});
 
     panier.forEach(item => {
       const row = document.createElement('tr');
