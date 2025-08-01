@@ -60,6 +60,10 @@ document.getElementById('vider-panier').addEventListener('click', () => {
     });
 
     totalElement.innerText = `Total : ${total.toLocaleString()} F`;
+    document.getElementById('vider-panier').addEventListener('click', () => {
+  localStorage.removeItem('panier');
+  location.reload();
+});
   </script>
 </body>
 </html>
