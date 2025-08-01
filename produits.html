@@ -62,6 +62,25 @@ html
     });
   });
 </script>
+  html
+<script>
+  const boutons = document.querySelectorAll('.btn-panier');
+
+  boutons.forEach((bouton, index) => {
+    bouton.addEventListener('click', () => {
+      const produit = {
+        nom: bouton.parentElement.querySelector('h3').innerText,
+        prix: bouton.parentElement.querySelector('p').innerText,
+      };
+
+      let panier = JSON.parse(localStorage.getItem('panier')) || [];
+      panier.push(produit);
+      localStorage.setItem('panier', JSON.stringify(panier));
+
+      alert('Produit ajouté au panier 🧺');
+    });
+  });
+</script>
 </body>
 </html>
 ```
