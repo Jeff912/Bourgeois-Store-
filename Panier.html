@@ -1,0 +1,56 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panier - Bourgeois Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Votre Panier 🧺</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="produits.html">Produits</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <table id="table-panier">
+        <thead>
+          <tr>
+            <th>Produit</th>
+            <th>Prix</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="total"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bourgeois Store. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    const panier = JSON.parse(localStorage.getItem('panier')) || [];
+    const tbody = document.querySelector('#table-panier tbody');
+    const totalElement = document.getElementById('total');
+    let total = 0;
+
+    panier.forEach(item => {
+      const row = document.createElement('tr');
+      row.innerHTML = `<td>item.nom</td><td>{item.prix}</td>`;
+      tbody.appendChild(row);
+
+      const prixNum = parseInt(item.prix.replace(/\D/g, '')); total += prixNum;
+    });
+
+    totalElement.innerText = `Total : ${total.toLocaleString()} F`;
+  </script>
+</body>
+</html>
+```
