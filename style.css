@@ -61,19 +61,19 @@ section {
 
 /* Bouton panier */
 .btn-panier {
-  background-color: #222;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  margin-top: 10px;
-  text-decoration: none;
   display: inline-block;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
   border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
 }
 
 .btn-panier:hover {
-  background-color: #555;
+  background-color: #0056b3;
 }
 
 /* Bouton WhatsApp */
