@@ -9,11 +9,11 @@
 </head>
 <body>
   <header>
-    <h1>Bourgeois Store</h1>
+    <h1>🧺 Bourgeois Store</h1>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="produits.html">Produits</a>
-      <a href="panier.html">🧺 Mon panier</a>
+      <a href="panier.html">Voir le panier</a>
     </nav>
   </header>
 
@@ -24,74 +24,45 @@
       <div class="produit">
         <img src="IMG_2697.jpeg" alt="Chaussures Homme 1" class="img-produit" />
         <h3>Chaussures Homme 1</h3>
-        <p>Prix : 10 000 F</p>
+        <p>Prix : 15 000 F</p>
         <p>Chaussures stylées et chics pour hommes à prix abordable.</p>
-        <button class="btn-panier">Ajouter au panier</button>
+        <button class="btn-panier" onclick="ajouterAuPanier('Chaussures Homme 1', '15 000 F')">Ajouter au panier</button>
       </div>
 
       <div class="produit">
         <img src="IMG_2703.jpeg" alt="Chaussures Homme 2" class="img-produit" />
         <h3>Chaussures Homme 2</h3>
         <p>Prix : 4 500 F</p>
-        <p>Chaussures stylées et chics pour hommes à prix abordable.</p>
-        <button class="btn-panier">Ajouter au panier</button>
+
+<p>Chaussures stylées et chics pour hommes à prix abordable.</p>
+        <button class="btn-panier" onclick="ajouterAuPanier('Chaussures Homme 2', '4 500 F')">Ajouter au panier</button>
       </div>
 
-      <div class="produit"> <img src="IMG_2696.jpeg" alt="Chaussures Homme 3" class="img-produit" />
+      <div class="produit">
+        <img src="IMG_2696.jpeg" alt="Chaussures Homme 3" class="img-produit" />
         <h3>Chaussures Homme 3</h3>
-        <p>Prix : 15 000 F</p>
+        <p>Prix : 12 000 F</p>
         <p>Modèle confortable et tendance, idéal pour toutes les occasions.</p>
-        <button class="btn-panier">Ajouter au panier</button>
+        <button class="btn-panier" onclick="ajouterAuPanier('Chaussures Homme 3', '12 000 F')">Ajouter au panier</button>
       </div>
 
-      <a href="https://wa.me/2250564283858" target="_blank" class="btn-contact">Commander sur WhatsApp</a>
+      <!-- Bouton voir le panier -->
+      <a href="panier.html" class="btn-panier" style="display:inline-block; margin-top:20px;">🧺 Voir le panier</a>
     </section>
-    <!-- Bouton voir le panier --> 
-html
-<a href="panier.html" class="btn-panier" id="btn-panier">
-  🧺 Voir le panier (<span id="compteur-panier">0</span>)
-</a>
-
-</main>
+  </main>
 
   <footer>
     <p>&copy; 2025 Bourgeois Store. Tous droits réservés.</p>
   </footer>
-html
-<script>
-  let compteur = 0;
 
-  document.querySelectorAll(".btn-panier").forEach(btn => {
-    btn.addEventListener("click", () => {
-      compteur++;
-      document.getElementById("compteur-panier").textContent = compteur;
-    });
-  });
-</script>
-  html
-<script>
-  const boutons = document.querySelectorAll('.btn-panier');
-
-  boutons.forEach((bouton, index) => {
-    bouton.addEventListener('click', () => {
-      const produit = {
-        nom: bouton.parentElement.querySelector('h3').innerText,
-        prix: bouton.parentElement.querySelector('p').innerText,
-      };
-
-      let panier = JSON.parse(localStorage.getItem('panier')) || [];
-      panier.push(produit);
-      localStorage.setItem('panier', JSON.stringify(panier));
-
-      alert('Produit ajouté au panier 🧺');
-    });
-  });
-</script>
-html
-<script>
-  const panier = JSON.parse(localStorage.getItem('panier')) || [];
-  document.getElementById('compteur-panier').innerText = panier.length;
-</script>
+  <script>
+    function ajouterAuPanier(nom, prix) {
+      const panier = JSON.parse(localStorage.getItem("panier")) || [];
+      panier.push({ nom, prix });
+      localStorage.setItem("panier", JSON.stringify(panier));
+      alert(`${nom} a été ajouté au panier.`);
+    }
+  </script>
 </body>
 </html>
 ```
