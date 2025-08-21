@@ -65,6 +65,33 @@ document.getElementById('vider-panier').addEventListener('click', () => {
   location.reload();
 });
   </script>
+html
+<script>
+  function afficherPanier() {
+    const panier = JSON.parse(localStorage.getItem("panier")) || [];
+    const tbody = document.querySelector("#table-panier tbody");
+    tbody.innerHTML = "";
+
+    if (panier.length === 0) {
+      tbody.innerHTML = "<tr><td colspan='2'>Votre panier est vide.</td></tr>";
+      return;
+    }
+
+    panier.forEach(item => {
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>item.nom</td><td>{item.prix}</td>`;
+
+tbody.appendChild(row);
+    });
+  }
+
+  function viderPanier() {
+    localStorage.removeItem("panier");
+    afficherPanier();
+  }
+
+  window.onload = afficherPanier;
+</script>
 </body>
 </html>
 ```
