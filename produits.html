@@ -25,8 +25,6 @@
         <h3>Chaussures Homme 1</h3>
         <p>Prix : 15 000 F</p>
         <p>Chaussures stylées et chics pour hommes à prix abordable.</p>
-        <button class="btn-panier" onclick="ajouterAuPanier('Chaussures Homme 1', '15 000 F')">Ajouter au panier</button>
-      </div>
 
       <div class="produit">
         <img src="IMG_2703.jpeg" alt="Chaussures Homme 2" class="img-produit" />
@@ -34,15 +32,11 @@
         <p>Prix : 4 500 F</p>
 
 <p>Chaussures stylées et chics pour hommes à prix abordable.</p>
-        <button class="btn-panier" onclick="ajouterAuPanier('Chaussures Homme 2', '4 500 F')">Ajouter au panier</button>
-      </div>
-
-      <div class="produit">
+   <div class="produit">
         <img src="IMG_2696.jpeg" alt="Chaussures Homme 3" class="img-produit" />
         <h3>Chaussures Homme 3</h3>
         <p>Prix : 12 000 F</p>
         <p>Modèle confortable et tendance, idéal pour toutes les occasions.</p>
-        <button class="btn-panier" onclick="ajouterAuPanier('Chaussures Homme 3', '12 000 F')">Ajouter au panier</button>
       </div>
     </section>
   </main>
@@ -50,14 +44,6 @@
   <footer>
     <p>&copy; 2025 Bourgeois Store. Tous droits réservés.</p>
   </footer>
-
-  <script>
-    function ajouterAuPanier(nom, prix) {
-      const panier = JSON.parse(localStorage.getItem("panier")) || [];
-      panier.push({ nom, prix });
-      localStorage.setItem("panier", JSON.stringify(panier));
-      alert(`${nom} a été ajouté au panier.`);
-    }
   </script>
 </body>
 </html>
